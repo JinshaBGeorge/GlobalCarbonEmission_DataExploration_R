@@ -9,7 +9,7 @@ library(directlabels)
 options(scipen = 999)
 
 #setting current working directory
-setwd("C:/Users/jinsh/Documents/R")
+setwd("C:/Users/jinsh/Documents/R") #Please change to the work directory
 getwd()
 
 ##################################################
