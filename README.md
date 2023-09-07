@@ -1,43 +1,28 @@
-# Project Report: Analysis of Global Carbon Emissions Data
+## Overview
 
-## About the Project
+This project focuses on the analysis of global carbon emissions data sourced from opendata-jrc and World Bank data. The primary objectives of this project are data preprocessing, cleaning, visualization, and deriving meaningful insights from the datasets.
 
-[Provide a brief introduction to your project and its purpose.]
 
-### Contents of the Project Report
+ **Data**: From opendata-jrc and World Bank data.
 
-1. **About the Dataset**
-   - Introduction to the chosen datasets.
-   - Details of the data sources.
-   - Explanation of how the data was gathered.
-   - Description of the datasets, including their names and sources.
+## Data Pre-processing and Cleaning
 
-2. **Data Pre-processing and Cleaning**
-   - Overview of the data pre-processing and cleaning steps.
-   - Explanation of how the data was transformed for analysis.
-   - Details of operations such as filtering, merging, and calculation of additional columns.
+The available data is in various formats and spread across three different datasets. The following data pre-processing and cleaning steps were undertaken:
 
-3. **Data Visualization**
-   - Visualizations to illustrate key findings:
-     - World map depicting average carbon emissions from 1970 to 2021.
-     - Correlation between population and carbon emissions over the years.
-     - Top 10 countries with the highest carbon emissions and trends.
-     - Comparison of land area vs. carbon emissions for the top 10 countries.
-     - Population vs. carbon emissions for the top 10 countries.
-     - Correlation between population density and carbon emissions per capita in 2021.
+- Skipping irrelevant columns and initial rows in CSV files containing data descriptions.
+- Tidying the raw data by using the `pivot_longer()` function to transform the Year variable spread across multiple columns.
+- Filtering data from the land area and population datasets to match the carbon emissions data, focusing on the years 1970 to 2021.
+- Merging the three data frames to create a single table.
+- Calculating new columns such as population density and carbon emission per capita.
 
-4. **Conclusion**
-   - Summary of the main findings and insights from the analysis.
-   - Key takeaways related to global carbon emissions, population trends, and more.
+## Conclusion
 
-## How to Use This Report
+After analyzing the global carbon emissions data from 1970 to 2021 in approximately 200 countries, the following key findings emerged:
 
-[Provide instructions on how users can navigate and make the best use of this report.]
+- Top contributors to global carbon emissions are China, USA, India, and Russia.
+- There is a linear and proportional relationship between global population and global carbon emissions, both showing an increase over the years.
+- China and India have seen exponential growth in carbon emissions, while the USA and Russia have maintained steadier emissions.
+- No conclusive relationship was found between a country's area and its carbon emissions.
+- Several outlier countries exhibit high carbon emissions per capita, though most countries remain below 0.02 carbon emissions per capita.
 
-## License
 
-[Include any licensing information or terms of use if applicable.]
-
----
-
-**Note:** This README provides an overview of the project report's contents. For detailed information, please refer to the full report document.
